@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://xpfdethg5jh"]
+
+[ext_resource type="Script" uid="uid://dyjudhwg1qhuj" path="res://virtual_joystick.gd" id="1_80edf"]
+
+[node name="GUI" type="Control" unique_id=358459234]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="." unique_id=1001850462]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 635.0
+offset_right = 436.0
+offset_bottom = 967.0
+joystick_size = 324.0
+tip_size = 207.0
+deadzone_ratio = 0.1
+script = ExtResource("1_80edf")
+
+[connection signal="tapped" from="VirtualJoystick" to="VirtualJoystick" method="_on_tapped"]

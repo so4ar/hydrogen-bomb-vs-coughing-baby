@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cyae8admis824"]
+
+[ext_resource type="Texture2D" uid="uid://hg1trbuxo4me" path="res://sprites/bomb.png" id="1_573fp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cc8xr"]
+radius = 219.0
+height = 956.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=735048851]
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=201845510]
+scale = Vector2(3.17, 3.17)
+texture = ExtResource("1_573fp")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1367932116]
+position = Vector2(15, 10)
+shape = SubResource("CapsuleShape2D_cc8xr")

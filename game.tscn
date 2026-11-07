@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ih6fwt7waqhc"]
+
+[ext_resource type="Script" uid="uid://cjbvubrlnr75b" path="res://main.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://cnel6saojyaga" path="res://sprites/concrete.png" id="2_0e48y"]
+
+[node name="Main" type="Node2D" unique_id=1800687196]
+script = ExtResource("1_wtcfe")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=714829931]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_0e48y")

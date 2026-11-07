@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://byse2obyewin7"]
+
+[ext_resource type="Texture2D" uid="uid://bveirqrc2i2n5" path="res://sprites/baby.png" id="1_2kj0s"]
+[ext_resource type="Script" uid="uid://p4qkhjbr6ghd" path="res://baby.gd" id="1_w1w5b"]
+[ext_resource type="AudioStream" uid="uid://bhje637xu1e35" path="res://sfx/baby-coughing-01.mp3" id="3_2m4sa"]
+[ext_resource type="AudioStream" uid="uid://hbtq0usq21t0" path="res://sfx/baby-coughing-02.mp3" id="4_0ncyr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cc8xr"]
+radius = 108.33019
+height = 430.1564
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cc8xr"]
+streams_count = 2
+stream_0/stream = ExtResource("3_2m4sa")
+stream_1/stream = ExtResource("4_0ncyr")
+
+[node name="Baby" type="CharacterBody2D" unique_id=654080024]
+script = ExtResource("1_w1w5b")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1311611237]
+rotation = 1.977458
+shape = SubResource("CapsuleShape2D_cc8xr")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1602347220]
+scale = Vector2(0.26243094, 0.26243094)
+texture = ExtResource("1_2kj0s")
+
+[node name="SFX" type="Node2D" parent="." unique_id=1078279653]
+
+[node name="Coughing" type="AudioStreamPlayer" parent="SFX" unique_id=1441869471]
+stream = SubResource("AudioStreamRandomizer_cc8xr")
